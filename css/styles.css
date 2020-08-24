@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
 * {
     box-sizing: border-box;
   }
   
   body {
     margin: 0px;
-    font-family: 'segoe ui';
+    font-family: 'Montserrat', sans-serif;
   }
   
   .nav {
     height: 50px;
     width: 100%;
-    background-color: #4d4d4d;
+    background-color: #fff;
     position: relative;
   }
   
@@ -21,7 +23,7 @@
   .nav > .nav-header > .nav-title {
     display: inline-block;
     font-size: 22px;
-    color: #fff;
+    color: #000000;
     padding: 10px 10px 10px 10px;
   }
   
@@ -39,11 +41,11 @@
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
-    color: #efefef;
+    color: #000000;
   }
   
   .nav > .nav-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #15C95D;
   }
   
   .nav > #nav-check {
@@ -64,19 +66,19 @@
       padding: 13px;
     }
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: #15C95D;
     }
     .nav > .nav-btn > label > span {
       display: block;
       width: 25px;
       height: 10px;
-      border-top: 2px solid #eee;
+      border-top: 2px solid black;
     }
     .nav > .nav-links {
       position: absolute;
       display: block;
       width: 100%;
-      background-color: #333;
+      background-color: white;
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
