@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+:root {
+    --verde: #00FF85;
+    --fundo: #16161B;
+    --branco: #fff;
+	--preto: #000;
+	--vermelho: red;
+	--azul: blue;
+	--laranja: orange;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fundo);
+	margin: 0px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.nav {
+	height: 90px;
+	width: 100%;
+	background-color: var(--fundo);
+	position: relative;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.nav-title {
+	font-size: ;
+	font-weight: bold;
+}
+
+.nav>.nav-header {
+	display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+	display: inline-block;
+	font-size: 40px;
+	color: #fff;
+	padding: 10px 10px 10px 10px;
+}
+
+.nav>.nav-btn {
+	display: none;
+}
+
+.nav>.nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	float: right;
+	font-size: 18px;
+	width: 650px;
+	height: 70px;
+	justify-content: space-around;
+	margin-right: 20px;
+}
+
+.nav>.nav-links>a {
+	display: inline-block;
+	padding: 13px 10px 13px 10px;
+	text-decoration: none;
+	color: #fff;
+}
+
+/*
+.nav>.nav-links>a:hover {
+	background-color: #15C95D;
+}
+*/
+
+.nav>#nav-check {
+	display: none;
+}
+
+.container_main {
+	max-width: 1005px;
+	margin: 0 auto;
+	padding: 2em 1em;
+}
+
+main {
+	display: flex;
+	flex-flow: column;
+}
+
+.hero {
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: white;
+}
+
+.hero p {
+	font-size: 1rem;
+	font-weight: 600;
+	max-width: 500px;
+	line-height: 1.8rem;
+	margin: 3em auto;
+	color: white;
+}
+
+.hero p:before {
+	content: "";
+	display: block;
+	width: 120px;
+	border: 2px solid #fff;
+	margin: 1em auto;
+}
+
+.hero a {
+	background: #00FF85;
+	padding: 1em 1.2em;
+	border-radius: 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 1.375em;
+	font-weight: bold;
+}
+
+figure {
+	text-align: center;
+}
+
+figure img {
+	margin: 3em auto 0;
+	width: 300px;
+}
+
+@media screen and (min-width: 820px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: wrap;
+		align-items: center;
+	}
+
+	main {
+		flex-flow: row;
+	}
+
+	.hero {
+		text-align: left;
+	}
+
+	.hero h1 {
+		font-size: 4em;
+	}
+
+	.hero p:before {
+		margin: 1em 0;
+	}
+
+	.hero p {
+		font-size: 1.3em;
+		padding: 0;
+		margin: 0 0 3em 0;
+	}
+
+	.device figure img {
+		width: 700px;
+		margin: 0;
+	}
+}
+
+
+@media (max-width:600px) {
+	.nav>.nav-btn {
+		display: inline-block;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		padding-right: 10px;
+		padding-top: 20px;
+	}
+	.nav>.nav-btn>label {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		padding: 13px;
+	}
+	.nav>.nav-btn>label:hover,
+	.nav #nav-check:checked~.nav-btn>label {
+		/*background-color: #15C95D;*/
+	}
+	.nav>.nav-btn>label>span {
+		display: block;
+		width: 25px;
+		height: 10px;
+		border-top: 2px solid white;
+	}
+	.nav>.nav-links {
+		position: absolute;
+		display: block;
+		width: 100%;
+		background-color: var(--fundo);
+		height: 0px;
+		transition: all 0.3s ease-in;
+		overflow-y: hidden;
+		top: 80px;
+		left: 0px;
+	}
+	.nav>.nav-links>a {
+		display: block;
+		width: 100%;
+	}
+	.nav>#nav-check:not(:checked)~.nav-links {
+		height: 0px;
+	}
+	.nav>#nav-check:checked~.nav-links {
+		height: calc(100vh - 50px);
+		overflow-y: auto;
+	}
+}
